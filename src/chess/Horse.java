@@ -1,20 +1,17 @@
 package chess;
 
-public class Bishop extends ChessFigure {
 
-    private int x;
+public class Horse extends ChessFigure{
+     private int x;
     private int y;
     private String color;
     
-    
- 
     @Override
     public String nameFigure(){
-       return "Bishop";
+       return "Horse";
    }
-    
     @Override
-    public void setColor(String color){
+    public void setColor(String color) {
         this.color = color;
     }
 
@@ -29,12 +26,14 @@ public class Bishop extends ChessFigure {
         
      boolean rightPlace = false;
      
-        for (int i = 0; i < 8; i++) {
-            if (((x == this.x + i) && (y == this.y + i)) || ((x == this.x - i) && (y == this.y - i)) || ((x == this.x + i) && (y == this.y - i)) || ((x == this.x + i) && (y == this.y - i))) {
+        for (int i = 0; i < 2; i++) {
+            if (((x == this.x + (i*2)) && (y == this.y + i)) || ((x == this.x + (i*2)) && (y == this.y - i)) || ((x == this.x + i) && (y == this.y + (i*2)))||((x == this.x + i) && (y == this.y - (i*2))) || ((x == this.x - (i*2)) && (y == this.y + i)) || ((x == this.x - (i*2)) && (y == this.y - i)) || ((x == this.x - i) && (y == this.y + (i*2)))||((x == this.x - i) && (y == this.y - (i*2)))) {
+                
                 rightPlace = true;
             }
         }
         if (rightPlace == false) {
+            
             System.out.println("Incorrect position!");
         } else {
             System.out.println("Position: (" + x + "," + y + ")");

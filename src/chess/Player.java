@@ -6,12 +6,26 @@ package chess;
  */
 public class Player {
 
-    public void colision(ChessFigure bishop1, ChessFigure bishop2) {
-        if ((bishop1.getX() == bishop2.getX()) && (bishop1.getY() == bishop2.getY())) {
-            System.out.println("Bishop1 is over Bishop2");
+   public void colision(ChessFigure myFigure1, ChessFigure myFigure2) {
+        if(myFigure1.nameFigure()=="Bishop"){
+            if (Math.abs(myFigure1.getX() - myFigure2.getX()) == Math.abs(myFigure1.getY() - myFigure2.getY())) {
+                System.out.println(myFigure1.nameFigure() + " can get "+ myFigure2.nameFigure());
+            }else{
+                System.out.println(myFigure1.nameFigure() + " can't get "+ myFigure2.nameFigure());
+            }
+            
         }
-        if (Math.abs(bishop1.getX() - bishop2.getX()) == Math.abs(bishop1.getY() - bishop2.getY())) {
-            System.out.println("Bishop1 can get Bishop2");
-        }
-    }
+         if(myFigure1.nameFigure()=="Horse"){
+              if ((myFigure1.getX() == myFigure2.getX()+1) && (myFigure1.getY() == myFigure2.getY()+2)) {
+                System.out.println(myFigure1.nameFigure() + " can get "+ myFigure2.nameFigure());
+            }else{
+                System.out.println(myFigure1.nameFigure() + " can't get "+ myFigure2.nameFigure());
+            }
+         }
+        
+         if ((myFigure1.getX() == myFigure2.getX()) && (myFigure1.getY() == myFigure2.getY())) {
+                System.out.println(myFigure1.nameFigure()+ " is over "+myFigure2.nameFigure());
+            }
+    }   
+   
 }
