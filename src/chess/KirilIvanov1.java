@@ -18,11 +18,11 @@ public class KirilIvanov1 {
         int playerX = 8;
         int playerY = 6;
 
-        ChessFigure bishop1 = new Bishop(1, 3);
+        ChessFigure bishop1 = new Bishop(3, 1);
         bishop1.setColor("white");
 
         bishop1.info();
-        bishop1.setPos(3, 1);
+        bishop1.setPos(8, 6);
 
         System.out.println();
 
