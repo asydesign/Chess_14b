@@ -18,28 +18,28 @@ public class KirilIvanov1 {
         int playerX;
         int playerY;
 
-        ChessFigure bishop1 = new Bishop();
-        bishop1.setColor("white");
-
-        bishop1.info();
-        bishop1.setPos(3,1);
-
-        System.out.println();
-
-        ChessFigure bishop2 = new Bishop();
-        bishop2.setColor("black");
-        bishop2.info();
-
-        System.out.println("Input position x:");
-        playerX = scr.nextInt();
-        System.out.println("Input position y:");
-        playerY = scr.nextInt();
-        bishop2.setPos(playerX, playerY);
-
-        System.out.println();
-        
-        Player myPlayer1 = new Player();
-        myPlayer1.colision(bishop1, bishop2);
+//        ChessFigure bishop1 = new Bishop();
+//        bishop1.setColor("white");
+//
+//        bishop1.info();
+//        bishop1.setPos(3,1);
+//
+//        System.out.println();
+//
+//        ChessFigure bishop2 = new Bishop();
+//        bishop2.setColor("black");
+//        bishop2.info();
+//
+//        System.out.println("Input position x:");
+//        playerX = scr.nextInt();
+//        System.out.println("Input position y:");
+//        playerY = scr.nextInt();
+//        bishop2.setPos(playerX, playerY);
+//
+//        System.out.println();
+//        
+//        Compair myPlayer1 = new Compair();
+//        myPlayer1.colision(bishop1, bishop2);
         
         System.out.println();
         System.out.println();
@@ -64,7 +64,7 @@ public class KirilIvanov1 {
         
         System.out.println();
         
-        Player myPlayer2 = new Player();
+        Compair myPlayer2 = new Compair();
         myPlayer2.colision(horse1, horse2);
         
     }
